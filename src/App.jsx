@@ -1,5 +1,4 @@
 import { useState } from 'react'
-// import * as Yup from "yup";
 import ContactForm from './ContactForm/ContactForm.jsx';
 import SearchBox from './SearchBox/SearchBox.jsx';
 import ContactList from './ContactList/ContactList.jsx';
