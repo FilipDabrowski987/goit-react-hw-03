@@ -1,5 +1,6 @@
 import { Formik, Form, Field } from 'formik';
 import { useId } from "react";
+import './SearchBox.css'
 
 const initialValues = {
   searchbox: "",
@@ -18,10 +19,10 @@ return (
         initialValues={initialValues}
         onSubmit={handleSubmit}
     >
-            <Form>
+            <Form className='search-form'>
                 <label htmlFor={searchboxFieldId}>Find contacts by name</label>
                 <br />
-                <Field
+                <Field className='search-form-field'
                     type="text"
                     name="searchbox"
                     id={searchboxFieldId}

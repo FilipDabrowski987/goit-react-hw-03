@@ -3,12 +3,23 @@
 }
 
 .contact-item {
-    width: 300px;
+    width: 240px;
+    height: 72px;
     background-color: white;
     border-radius: 6px;
     border: 2px solid black;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 0 10px 0 10px;
-    font-size: 20px;
+    font-size: 14px;
     font-family: Arial, Helvetica, sans-serif
+}
+
+.contact-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-contacts-button {
+    height: 25px;
 }
