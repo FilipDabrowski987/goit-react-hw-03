@@ -2,7 +2,7 @@ import { Formik, Form, Field } from 'formik';
 import { useId } from "react";
 
 const initialValues = {
-  searchbox: ""
+  searchbox: "",
 };
 
 const SearchBox = ( {filter, onFilterChange} ) => {
@@ -18,7 +18,6 @@ return (
         initialValues={initialValues}
         onSubmit={handleSubmit}
     >
-        {({ handleChange, setFieldValue }) => (
             <Form>
                 <label htmlFor={searchboxFieldId}>Find contacts by name</label>
                 <br />
@@ -27,15 +26,9 @@ return (
                     name="searchbox"
                     id={searchboxFieldId}
                     value={filter}
-                    onChange={(e) => {
-                        handleChange(e);
-                        const { value } = e.target;
-                        setFieldValue("searchbox", value);
-                        onFilterChange(value);
-                    }}
+                    onChange={(e) => onFilterChange(e.target.value)}
                 />
             </Form>
-        )}
     </Formik>
   );
 };

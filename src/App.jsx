@@ -37,13 +37,13 @@ function App() {
   }, [contacts]);
 
   return (
-  <div>
-  <h1>Phonebook</h1>
-  <ContactForm onAddContact={addContact}/>
-  <SearchBox filter={filter} onFilterChange={setFilter}/>
+    <div>
+      <h1>Phonebook</h1>
+      <ContactForm onAddContact={addContact} />
+      <SearchBox filter={filter} onFilterChange={setFilter} />
       <ContactList contacts={filteredContacts} deleteContacts={deleteContacts} />
-  </div>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;

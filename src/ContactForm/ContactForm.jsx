@@ -4,8 +4,14 @@ import * as Yup from "yup";
 import { nanoid } from 'nanoid'; 
 
 const FeedbackSchema = Yup.object().shape({
-    name: Yup.string().min(2, 'Contact name too short').max(50, "Contact name too Long!").required("Required"),
-    number: Yup.string().min(2, 'Contact number too short').max(50, "Contact number too Long!").required("Required")
+    name: Yup.string()
+        .min(2, 'Contact name too short')
+        .max(50, "Contact name too Long!")
+        .required("Required"),
+    number: Yup.string()
+        .min(2, 'Contact number too short')
+        .max(50, "Contact number too Long!")
+        .required("Required"),
 });
 
 const initialValues = {
@@ -25,7 +31,6 @@ const handleSubmit = (values, actions) => {
     };
 
         onAddContact(newContact);
-        
         actions.resetForm();
   };
     
@@ -40,7 +45,7 @@ const handleSubmit = (values, actions) => {
                 <Field type="text" name="name" id={nameFieldId} />
                 <ErrorMessage name="name" as="span" />
                 <label htmlFor={numberFieldId}>Number</label>
-                <Field type="" name="number" id={numberFieldId} />
+                <Field type="text" name="number" id={numberFieldId} />
                 <ErrorMessage name="number" as="span" />
                 <button type="submit">Add contact</button>
         </Form>
