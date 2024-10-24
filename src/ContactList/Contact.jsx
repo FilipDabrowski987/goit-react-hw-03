@@ -1,4 +1,4 @@
-const Contact = ({ name, number }) => {
+const Contact = ({ name, number, deleteContacts, id }) => {
     return (
         <div>
             <div>
@@ -9,6 +9,7 @@ const Contact = ({ name, number }) => {
                 {/* ikonka */}
                 <p>{number}</p>
             </div>
+            <button onClick={() => deleteContacts(id)}>Delete</button>
         </div>
     );
 };
