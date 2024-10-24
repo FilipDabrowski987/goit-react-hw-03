@@ -10,7 +10,6 @@ const Contact = ({ name, number, deleteContacts, id }) => {
                 <p><IoPerson/>  {name}</p>
                 </div>
                 <div>
-                {/* ikonka */}
                 <p><FaPhoneAlt/>  {number}</p>
                 </div>
             </div>

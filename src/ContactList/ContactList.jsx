@@ -17,6 +17,5 @@ const ContactList = ( { contacts, deleteContacts } ) => {
             }
       </ul>
     )
-  
 };
 export default ContactList
